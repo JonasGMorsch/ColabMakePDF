@@ -32,7 +32,7 @@ def colab_to_pdf(notebook_pattern: str, notebooks_folder_name = 'Colab Notebooks
         from google.colab import drive
         drive.mount(gdrive_mount_point, force_remount=True)
 
-    notebooks_folder_path = gdrive_mount_point / pathlib.Path(f"My Drive/{notebooks_folder_name}")  
+    notebooks_folder_path = gdrive_mount_point / pathlib.Path(f"MyDrive/{notebooks_folder_name}")  
     # Verify is colab notebooks path is valid
     if not os.path.isdir(notebooks_folder_path):
         raise FileNotFoundError(f"noteboooks folder path {notebooks_folder_path} not found, try again!")
