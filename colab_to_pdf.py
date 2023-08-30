@@ -64,7 +64,7 @@ def colab_to_pdf(notebook_pattern: str, notebooks_folder_name = 'Colab Notebooks
     for i, n in enumerate(notebooks):
         print(f"\nProcessing  [{i+1:{len(str(len(notebooks)))}d}/{len(notebooks)}]  {n.name}\n")
         try:
-            get_ipython().system(f"jupyter nbconvert '{n.as_posix()}' --to pdf --template '/content/classic.tplx'")
+            get_ipython().system(f"jupyter nbconvert --to pdf '{n.as_posix()}'")
         except:
             return("nbconvert error")
         
