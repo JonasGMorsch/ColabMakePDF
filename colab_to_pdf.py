@@ -10,7 +10,7 @@ def colab_to_pdf():
     try:
         import ipynbname
     except:
-        %pip install ipynbname
+        !pip install ipynbname
         import ipynbname
         from google.colab import output
         output.clear() # erase collab console
