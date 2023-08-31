@@ -5,7 +5,7 @@ Simple utility function that lets you convert your colab notebook(s) to PDF(s).
 ## Usage
 1. Verify the notebook you want to convert is shared to "anyone with the link" with at least "viewer" privilege 
 2. Verify the notebook you want to convert is executed and saved.
-3. Copy & Paste the below code in a new code cell, at the bottom of the notebook you whant to make a PDF
+3. Copy & Paste the below code in a new code cell, at the bottom of the notebook and run it, to make a PDF
     
 ```bash
 !rm -rf makepdf.py
