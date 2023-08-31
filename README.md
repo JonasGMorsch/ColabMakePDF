@@ -9,7 +9,7 @@ Simple utility function that lets you convert your colab notebook(s) to PDF(s).
     
 ```bash
 !rm -rf makepdf.py
-!wget https://github.com/JonasGMorsch/ColabMakePDF/raw/master/makepdf.py
+!wget https://raw.githubusercontent.com/JonasGMorsch/ColabMakePDF/master/makepdf.py
 import makepdf; makepdf.start()
 ```
 3. Wait about a minute (on first run) for the file to be sent to your browser
