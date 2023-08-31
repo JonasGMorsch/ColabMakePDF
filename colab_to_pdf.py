@@ -25,8 +25,6 @@ def colab_to_pdf():
     script_name = ipynbname.name()[7:]
     !gdown $script_name
     
-    
-    
     # Get a list of all ipynb in /content/
     for filepath in pathlib.Path("/content/").iterdir():
         if re.search(r"\w+.ipynb\b", filepath.name):
