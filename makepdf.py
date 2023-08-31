@@ -4,14 +4,12 @@
 # https://stackoverflow.com/questions/60748816/convert-google-colab-notebook-to-pdf-html
 # https://github.com/hurshd0/colab_notebook_to_pdf/
 
+def start():
 
-def makepdf():
-
-    get_ipython().system("pip install pypandoc --quiet")
-    get_ipython().system("pip install ipynbname --quiet")
+    get_ipython().system("pip install pypandoc ipynbname --quiet")
     get_ipython().system("apt-get install texlive texlive-xetex texlive-latex-extra pandoc --quiet")
     import re, pathlib, os, ipynbname
-    from google.colab import files, output
+    from google.colab import files
     
     script_id = ipynbname.name()[7:]
     get_ipython().system("gdown {script_id}")
