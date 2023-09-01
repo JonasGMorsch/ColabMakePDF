@@ -6,13 +6,15 @@
 
 def start():
 
-    get_ipython().system("pip install pypandoc ipynbname --quiet")
-    get_ipython().system("apt-get install texlive texlive-xetex texlive-latex-extra pandoc --quiet")
-    import re, pathlib, os, ipynbname
-    from google.colab import files
-    
+    get_ipython().system("pip install ipynbname --quiet")
+    import ipynbname
     script_id = ipynbname.name()[7:]
     get_ipython().system("gdown {script_id}")
+    
+    get_ipython().system("pip install pypandoc ipynbname --quiet")
+    get_ipython().system("apt-get install texlive texlive-xetex texlive-latex-extra pandoc --quiet")
+    import re, pathlib, os
+    from google.colab import files
     
     # Get a list of all ipynb in /content/
     for filepath in pathlib.Path("/content/").iterdir():
