@@ -11,7 +11,7 @@ def start():
     script_id = ipynbname.name()[7:]
     get_ipython().system("gdown {script_id}")
     
-    get_ipython().system("pip install pypandoc ipynbname --quiet")
+    get_ipython().system("pip install pypandoc --quiet")
     get_ipython().system("apt-get install texlive texlive-xetex texlive-latex-extra pandoc --quiet")
     import re, pathlib, os
     from google.colab import files
