@@ -15,6 +15,7 @@ def prepare():
     return
 
 def pdf():
+    prepare()
     get_ipython().system("pip install pypandoc --quiet")
     get_ipython().system("apt-get install texlive texlive-xetex texlive-latex-extra pandoc --quiet")
     # Get a list of all ipynb in /content/
@@ -25,6 +26,7 @@ def pdf():
     return
     
 def html():
+    prepare()
     # Get a list of all ipynb in /content/
     for filepath in pathlib.Path("/content/").iterdir():
         if re.search(r"\w+.ipynb\b", filepath.name):
